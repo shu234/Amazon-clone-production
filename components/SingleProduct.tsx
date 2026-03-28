@@ -1,10 +1,10 @@
 import { Product } from '@/type'
 import React from 'react'
 import ProductImage from './ProductImage'
-import PriceTag from './PriceTag'
+
 import PriceFormat from './PriceFormat'
 import { MdStar } from 'react-icons/md'
-import { cn } from '@/lib/utils'
+
 import { FaRegEye } from 'react-icons/fa'
 import AddToCardBtn from './AddToCardBtn'
 import Image from 'next/image'
