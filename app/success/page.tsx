@@ -1,7 +1,7 @@
 'use client'
 import Container from '@/components/Container'
 import { store } from '@/lib/store'
-import { useSession } from 'next-auth/react'
+
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
@@ -13,18 +13,18 @@ const SuccessPage = () => {
   const sessionId = searchParams.get("session_id");
   const router = useRouter();
   const {resetCart}=store();
-  const {data:session}=useSession();
+ 
 
   useEffect(()=>{
-    if(!sessionId &&  !session?.user) {
+    if(!sessionId ) {
       return router.push("/")
     }else{
 
-      resetCart()
+      resetCart();
     toast.success("Payment received successfully")
     }
 
-  },[sessionId,resetCart,router, session?.user])
+  },[sessionId,resetCart,router])
   return (
     <Container>
       <div className='min-h-[400px] flex flex-col items-center justify-center gap-y-5'>
