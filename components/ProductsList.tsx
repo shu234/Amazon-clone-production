@@ -1,5 +1,5 @@
 import { Product } from "@/type";
-import { Divide } from "lucide-react";
+
 import React from "react";
 import ProductCard from "./ProductCard";
 import Container from "./Container";

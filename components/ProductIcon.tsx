@@ -4,7 +4,7 @@ import { Product } from '@/type'
 
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast'
-import { MdFavorite, MdFavoriteBorder } from 'react-icons/md'
+import {  MdFavoriteBorder } from 'react-icons/md'
 
 const ProductIcon = ({product}:{product:Product}) => {
     const {favoriteProduct, addToFavorite}=store();

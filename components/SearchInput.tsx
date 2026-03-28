@@ -1,5 +1,5 @@
 "use client";
-import React, { use, useEffect, useRef, useState } from "react";
+import React, {  useEffect, useRef, useState } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 import { MdOutlineClose } from "react-icons/md";
 import Link from "next/link";
