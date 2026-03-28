@@ -5,10 +5,20 @@ import { store } from '@/lib/store'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
-import React, { useEffect } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import toast from 'react-hot-toast'
 
-const SuccessPage = () => {
+const SuccessPage =()=>{
+  return (
+    <Container>
+      <Suspense fallback={<div>Loading...</div>}>
+        <SuccessContent/>
+      </Suspense>
+    </Container>
+  )
+}
+
+const SuccessContent = () => {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("session_id");
   const router = useRouter();
