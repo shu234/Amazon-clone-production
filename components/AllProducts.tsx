@@ -11,12 +11,12 @@ import { Product } from "@/type";
 import { Loader2 } from "lucide-react";
 
 const AllProducts = ({categories}:{categories:string[]}) => {
-  const [loading,setLoading]=useState(false);
+  const [loading,setLoading] = useState(false);
   const [products,setProducts]=useState<Product[]>([]);
   const [currentPage,setCurrentPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
-  const [priceFilter,setPriceFilter]= useState("");
+  const [priceFilter, setPriceFilter] = useState("");
   const [PriceValue,setPriceValue] =useState(0);
   const maxPrice =40000;
   const defaultPrice =0;
@@ -92,7 +92,7 @@ const AllProducts = ({categories}:{categories:string[]}) => {
               setSelectedCategory={setSelectedCategory}
               selectedCategory={selectedCategory}
               priceFilter ={priceFilter}
-              setPriceFilter = {setPriceFilter}
+              setPriceFilter= {setPriceFilter}
               priceValue ={PriceValue}
               setPriceValue={setPriceValue}
               defaultPrice={defaultPrice}
@@ -108,7 +108,7 @@ const AllProducts = ({categories}:{categories:string[]}) => {
              
             </div>
             <div ref={observerRef}>
-              {!loading&&(
+              {loading&&(
                 <div className="w-full flex items-center justify-center mt-10 py-10 bg-amazonBlue/5">
                 <Loader2 className="w-10 h-10 text-amazonOrangeDark animate-spin"/>
               </div>)}

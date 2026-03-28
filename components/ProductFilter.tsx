@@ -8,7 +8,7 @@ interface Props{
   categories:string[];
   setSelectedCategory:(category:string)=>void
   selectedCategory:string;
-  setPriceFilter:(value:number)=>void
+  setPriceFilter:(value:string)=>void
   priceFilter:string;
   setPriceValue:(value:number)=>void;
   priceValue:number;
@@ -63,7 +63,7 @@ const ProductFilter = ({
               onCheckedChange={()=>setPriceFilter(item?.value)}
               checked={item?.value===priceFilter}
               />
-              <Label htmlFor={`price-${item}`} className="ml-2">
+              <Label htmlFor={`price-${item?.value}`} className="ml-2">
                 {item?.title}
               </Label>
 
